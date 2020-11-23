@@ -1,2 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="navbar">
+  <div class="navbar__logo">LOGO</div>
+  <div class="navbar__list">
+    <li class="navbar__item item1">Studio</li>
+    <li class="navbar__item item2">Log-in</li>
+    <li class="navbar__item item3">Log-out</li>
+  </div>
+</div>
+
+<div class="banner">
+  <div class="banner-content text-center">
+    <h1>AirStudio</h1>
+    <p>Bringing recording solutions to all artists</p>
+    <%= link_to "Sign In", "#", class: "btn btn-lg btn-primary"  %>
+    <%= link_to "View our studios", "#", class: "btn btn-lg btn-primary"  %>
+  </div>
+</div>
