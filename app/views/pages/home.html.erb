@@ -1,17 +1,19 @@
 <div class="navbar">
-  <div class="navbar__logo">LOGO</div>
+  <div class="navbar__logo">
+    <%= image_tag "logo.png", class:"logo" %>
+  </div>
   <div class="navbar__list">
-    <li class="navbar__item item1">Studio</li>
-    <li class="navbar__item item2">Log-in</li>
-    <li class="navbar__item item3">Log-out</li>
+    <li class="navbar__item item1"> <%= link_to 'Our Studios', studios_index_path %> </li>
+    <li class="navbar__item item2"> <%= link_to 'Sign in', user_session_path %> </li>
+<!--     <li class="navbar__item item3">Log-out</li> -->
   </div>
 </div>
 
 <div class="banner">
   <div class="banner-content text-center">
     <h1>AirStudio</h1>
-    <p>Bringing recording solutions to all artists</p>
-    <%= link_to "Sign In", "#", class: "btn btn-lg btn-primary"  %>
-    <%= link_to "View our studios", "#", class: "btn btn-lg btn-primary"  %>
+    <p>Rent a recording studio from our growing network of studio owners</p>
+    <%= link_to "Sign-up", new_user_registration_path, class: "btn btn-lg btn-primary"  %>
+    <%= link_to "View Studios", studios_path, class: "btn btn-lg btn-primary"  %>
   </div>
 </div>
