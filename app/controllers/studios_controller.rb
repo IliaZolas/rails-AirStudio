@@ -1,6 +1,6 @@
 class StudiosController < ApplicationController
   def index
-    @studio = Studio.all
+    @studios = Studio.all
   end
 
   def new
