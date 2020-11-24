@@ -1,2 +1,27 @@
-<h1>Studios#index</h1>
-<p>Find me in app/views/studios/index.html.erb</p>
+<div class="container">
+  <div class="text-center">
+    <h1>FIND THE BEST RECORDING STUDIO</h1>
+  </div>
+
+  <div class="row">
+    <% @studios.each do |studio| %>
+      <div class="col-3">
+        <div class="card" class="border-bottom" style="width: 18rem;">
+          <div class="card-header">
+            <h2><%= studio.title %></h2>
+          </div>
+          <img class="card-img-top" src="https://static.questiondeson.com/img/studios/a/1-studio-a-2019-front.jpg" alt="Card image cap">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-start">
+              <p class="card-text card-studio-address"><%= studio.address %></p>
+              <p class="card-text card-studio-price">CHF <%= studio.price %>.-</p>
+            </div>
+              <%= link_to "VIEW DETAILS", "#", class: 'btn btn-warning btn-lg btn-block' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
