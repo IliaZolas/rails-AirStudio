@@ -63,3 +63,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # gem to preload login forms
 gem 'devise'
+
+# cloudinary
+gem 'cloudinary', '~> 1.16.0'
+
