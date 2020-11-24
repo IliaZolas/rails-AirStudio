@@ -17,7 +17,9 @@ puts 'Creating 20 fake users...'
 20.times do
   user = User.new(
     email:    Faker::Internet.email,
-    password: "123456"
+    password: "123456",
+    last_name: Faker::Name.unique.name,
+    first_name: Faker::Name.unique.name
   )
   user.save!
 end
@@ -25,7 +27,7 @@ end
 puts 'Creating 20 fake studios...'
 20.times do
   studio = Studio.new(
-    title:    Faker::Book.title,
+    title:    Faker::Book.unique.title,
     address: Faker::Address.full_address,
     price:  rand(85..214),
     description: Faker::Lorem.paragraphs(number: 1),

@@ -10,7 +10,7 @@
     <p><%= @studio.description %></p>
   </div>
   <div class="studio-owner">
-    <p>Created by <%= @studio.user.email %></p>
+    <p>Created by <%= @studio.user.first_name %></p>
   </div>
   <%= link_to "Back to all studios", studios_path, class: 'btn btn-primary' %>
 </div>

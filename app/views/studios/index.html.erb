@@ -16,7 +16,7 @@
               <p class="card-text card-studio-address"><%= studio.address %></p>
               <p class="card-text card-studio-price">CHF <%= studio.price %>.-</p>
             </div>
-              <%= link_to "VIEW DETAILS", "#", class: 'btn btn-warning btn-lg btn-block' %>
+              <%= link_to "VIEW DETAILS", studio_path(studio), class: 'btn btn-warning btn-lg btn-block' %>
           </div>
         </div>
       </div>
