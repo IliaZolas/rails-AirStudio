@@ -14,7 +14,7 @@ User.destroy_all
 Studio.destroy_all
 
 puts 'Creating 20 fake users...'
-2.times do
+20.times do
   user = User.new(
     email:    Faker::Internet.email,
     password: "123456"
@@ -23,7 +23,7 @@ puts 'Creating 20 fake users...'
 end
 
 puts 'Creating 20 fake studios...'
-2.times do
+20.times do
   studio = Studio.new(
     title:    Faker::Book.title,
     address: Faker::Address.full_address,
