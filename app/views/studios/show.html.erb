@@ -1,0 +1,17 @@
+<div class="studio-container">
+  <img class="studio-img" src='https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'>
+  <h1 class="studio-title"><%= @studio.title %></h1>
+  <div class="studio-infos">
+    <p class="studio-address"><%= @studio.address %></p>
+    <p class="studio-price"><%= @studio.price %> CHF</p>
+  </div>
+  <div class="studio-description">
+    <h2>Description</h2>
+    <p><%= @studio.description %></p>
+  </div>
+  <div class="studio-owner">
+    <p>Created by <%= @studio.user.email %></p>
+  </div>
+  <%= link_to "Back to all studios", studios_index_path, class: 'btn btn-primary' %>
+</div>
+
