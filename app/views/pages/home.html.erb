@@ -1,9 +1,11 @@
 <div class="navbar">
-  <div class="navbar__logo">LOGO</div>
+  <div class="navbar__logo">
+    <%= image_tag "logo.png", class:"logo" %>
+  </div>
   <div class="navbar__list">
     <li class="navbar__item item1"> <%= link_to 'Our Studios', studios_index_path %> </li>
-    <li class="navbar__item item2">Log-in</li>
-    <li class="navbar__item item3">Log-out</li>
+    <li class="navbar__item item2"> <%= link_to 'Sign in', user_session_path %> </li>
+<!--     <li class="navbar__item item3">Log-out</li> -->
   </div>
 </div>
 
