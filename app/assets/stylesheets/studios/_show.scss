@@ -5,13 +5,18 @@ p {
 .studio-container {
   width: 50%;
   margin: auto;
-  padding:10px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .studio-img {
-  border-radius: 5px;
   width: 100%;
-  margin: 10px 0px 30px 0;
+  margin: 0px 0px 30px 0;
+  border-bottom-right-radius: 100px,
+}
+
+.img-infos {
+    position: relative;
 }
 
 .studio-title {
@@ -22,14 +27,15 @@ p {
   justify-content: space-between;
 }
 
-.studio-address {
-
+.studio-price {
+  position: absolute;
+  top: 20px;
+  right: 40px;
 }
 
-.studio-price {
+.studio-price p {
   font-size: 25px;
-  display: flex;
-  align-items: top;
+  color: white;
 }
 
 .studio-description h2 {
@@ -40,11 +46,18 @@ p {
 
 .studio-description p {
   text-align: justify;
-  font-weight: lighter;
+  font-weight: 100;
 }
 
 .studio-owner {
   text-align: right;
+  margin: 50px 0 0 0;
 }
 
+.studio-owner p {
+  font-size: 15px;
+}
 
+.description-container {
+  padding: 10px
+}
