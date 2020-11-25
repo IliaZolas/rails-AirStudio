@@ -1,1 +1,10 @@
-
+<div class="navbar">
+  <div class="navbar__logo">
+    <%= link_to image_tag("logo.png", class:"logo"), root_path %>
+  </div>
+  <div class="navbar__list">
+    <li class="navbar__item item1"> <%= link_to 'Our Studios', studios_path, class:"navbar__links" %> </li>
+    <li class="navbar__item item2"> <%= link_to 'Sign in', user_session_path, class:"navbar__links" %> </li>
+    <!--     <li class="navbar__item item3">Log-out</li> -->
+  </div>
+</div>
