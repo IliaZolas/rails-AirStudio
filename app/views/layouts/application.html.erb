@@ -13,9 +13,6 @@
 
   <body>
 
-    <%= render 'shared/flashes' %>
-    <%= yield %>
-
     <!--  Navigation Bar -->
 
     <div class="navbar">
@@ -32,14 +29,12 @@
     <!--  Rendered from other views -->
 
     <%= yield %>
+    
+    <%= render 'shared/flashes' %>
 
     <!--  Footer -->
 
-    <div class="footer">
-      <div class="footer-content">
-        <p> Proudly brought to you by Team Pegs</p>
-      </div>
-    </div>
-
+    <%= render "shared/footer" %>
+    
   </body>
 </html>
