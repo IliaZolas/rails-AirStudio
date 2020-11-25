@@ -13,27 +13,132 @@ puts "cleaning data base"
 User.destroy_all
 Studio.destroy_all
 
-puts 'Creating 20 fake users...'
-20.times do
+puts "creating the makers users"
+
+jonas = User.new(
+    email: "jonas@mail.com",
+    password: "123456",
+    last_name: 'Hermon',
+    first_name: 'Jonas',
+  )
+jonas.save!
+
+elodie = User.new(
+    email: "elodie@mail.com",
+    password: "123456",
+    last_name: 'Holley',
+    first_name: 'Elodie',
+  )
+elodie.save!
+
+ilia = User.new(
+    email: "Ilia@mail.com",
+    password: "123456",
+    last_name: 'Zola',
+    first_name: 'Ilia',
+  )
+ilia.save!
+
+ghizlaine = User.new(
+    email: "ghighi@mail.com",
+    password: "123456",
+    last_name: 'Odyssey',
+    first_name: 'Ghizlaine',
+  )
+ghizlaine.save!
+
+puts 'Creating 5 fake users...'
+
+5.times do
   user = User.new(
     email:    Faker::Internet.email,
     password: "123456",
-    last_name: Faker::Name.unique.name,
-    first_name: Faker::Name.unique.name
+    last_name: Faker::Name.first_name,
+    first_name: Faker::Name.last_name,
+
   )
   user.save!
 end
+
+puts "creating Makers 8 Studios"
+
+  studio1 = Studio.new(
+    title:    Faker::Book.unique.title,
+    address: "rue Marterey 36, 1005 lausanne",
+    price:  rand(85..214),
+    description: Faker::Lorem.paragraph,
+    user: jonas
+  )
+  studio1.save!
+  studio2 = Studio.new(
+    title:    Faker::Book.unique.title,
+    address: "Avenue du Leman 19, 1005 Lausanne",
+    price:  rand(85..214),
+    description: Faker::Lorem.paragraph,
+    user: jonas
+  )
+  studio2.save!
+  studio3 = Studio.new(
+    title:    Faker::Book.unique.title,
+    address: "Boulvevard de Grancy 1, 1006 Lausanne",
+    price:  rand(85..214),
+    description: Faker::Lorem.paragraph,
+    user: ilia
+  )
+  studio3.save!
+  studio4 = Studio.new(
+    title:    Faker::Book.unique.title,
+    address: "Rue Beau-Sejour 27, 1003 Lausanne",
+    price:  rand(85..214),
+    description: Faker::Lorem.paragraph,
+    user: ilia
+  )
+  studio4.save!
+  studio5 = Studio.new(
+    title:    Faker::Book.unique.title,
+    address: "Avenue de la gare 46, 1001 Lausanne",
+    price:  rand(85..214),
+    description: Faker::Lorem.paragraph,
+    user: elodie
+  )
+  studio5.save!
+  studio6 = Studio.new(
+    title:    Faker::Book.unique.title,
+    address: "Rue du tunnel 7, 1005 Lausanne",
+    price:  rand(85..214),
+    description: Faker::Lorem.paragraph,
+    user: elodie
+  )
+  studio6.save!
+  studio7 = Studio.new(
+    title:    Faker::Book.unique.title,
+    address: "Rue du tunnel 1, 1005 Lausanne",
+    price:  rand(85..214),
+    description: Faker::Lorem.paragraph,
+    user: ghizlaine
+  )
+  studio7.save!
+  studio8 = Studio.new(
+    title:    Faker::Book.unique.title,
+    address: "Rue du Simplon 35, 1006 Lausanne",
+    price:  rand(85..214),
+    description: Faker::Lorem.paragraph,
+    user: ghizlaine
+  )
+  studio8.save!
+
 
 puts 'Creating 20 fake studios...'
 20.times do
   studio = Studio.new(
     title:    Faker::Book.unique.title,
-    address: Faker::Address.full_address,
+    address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
     price:  rand(85..214),
-    description: Faker::Lorem.paragraphs(number: 1),
-    user_id: User.first.id + 1
+    description: Faker::Lorem.paragraph,
+    user: User.all.sample
   )
   studio.save!
 end
+
 puts 'Finished!'
 
