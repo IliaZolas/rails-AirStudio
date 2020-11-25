@@ -11,7 +11,7 @@ p {
 .studio-img {
   border-radius: 5px;
   width: 100%;
-  margin: 10px auto;
+  margin: 10px 0px 30px 0;
 }
 
 .studio-title {
@@ -27,15 +27,20 @@ p {
 }
 
 .studio-price {
-
+  font-size: 25px;
+  display: flex;
+  align-items: top;
 }
 
 .studio-description h2 {
   font-size: 20px;
+  margin-top: 15px;
+  font-weight: bolder;
 }
 
 .studio-description p {
   text-align: justify;
+  font-weight: lighter;
 }
 
 .studio-owner {
