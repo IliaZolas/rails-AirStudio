@@ -1,9 +1,9 @@
 <div class="studio-container">
   <img class="studio-img" src='https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'>
   <h1 class="studio-title"><%= @studio.title %></h1>
-  <div class="studio-infos">
-    <p class="studio-address"><%= @studio.address %></p>
-    <p class="studio-price"><%= @studio.price %> CHF</p>
+  <div class="studio-infos d-flex justify-content-between">
+    <p class="studio-address text-muted"><%= @studio.address %></p>
+    <p class="studio-price align-item-top"><%= @studio.price %> CHF</p>
   </div>
   <div class="studio-description">
     <h2>Description</h2>
