@@ -4,7 +4,11 @@
   </div>
   <div class="navbar__list">
     <li class="navbar__item item1"> <%= link_to 'Our Studios', studios_path, class:"navbar__links" %> </li>
-    <li class="navbar__item item2"> <%= link_to 'Sign in', user_session_path, class:"navbar__links" %> </li>
+    <% if user_signed_in? %>
+        <li class="navbar__item item1"> <%= link_to "logout", destroy_user_session_path, method: :delete %></li>
+    <% else %>
+        <li class="navbar__item item1"> <%= link_to 'login', user_session_path  %></li>
+    <% end %>
     <!--     <li class="navbar__item item3">Log-out</li> -->
   </div>
 </div>
