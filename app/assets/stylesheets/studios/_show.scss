@@ -2,62 +2,20 @@ p {
   font-size: 18px;
 }
 
-.studio-container {
+.studio-show-card {
   width: 50%;
   margin: auto;
   background-color: white;
-  border-radius: 10px;
-}
-
-.studio-img {
-  width: 100%;
-  margin: 0px 0px 30px 0;
-  border-bottom-right-radius: 100px,
-}
-
-.img-infos {
-    position: relative;
 }
 
 .studio-title {
-  font-size: 40px !important;
+  font-size: 35px !important;
+  margin: 0px;
 }
 
-.studio-infos {
-  justify-content: space-between;
-}
-
-.studio-price {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-}
-
-.studio-price p {
-  font-size: 25px;
-  color: white;
-}
-
-.studio-description h2 {
-  font-size: 20px;
-  margin-top: 15px;
-  font-weight: bolder;
-}
-
-.studio-description p {
+.studio-description {
   text-align: justify;
   font-weight: 100;
 }
 
-.studio-owner {
-  text-align: right;
-  margin: 50px 0 0 0;
-}
 
-.studio-owner p {
-  font-size: 15px;
-}
-
-.description-container {
-  padding: 10px
-}
