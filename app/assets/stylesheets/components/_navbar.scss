@@ -1,11 +1,10 @@
 .navbar {
 
-  position: relative;
+  position: fixed;
   font-size: 18px;
   color: #fff;
-  // text-decoration: none;
   left: 0;
-  background-color: black;
+  background-color: rgba(0,0,0, 0.7);
   width: 100%;
   height: 70px;
   display: flex;
@@ -18,8 +17,6 @@
     list-style: none;
   }
   &__item{
-    // color: #fff;
-    // text-decoration: none;
     padding: 1rem;
   }
   &__links {
@@ -35,4 +32,17 @@
 .logo {
   width: 20rem;
   padding: 10px;
+}
+
+.item2 a {
+  color: white;
+  background-color: $orange;
+  border-radius: 2px;
+  padding: 10px;
+  text-decoration: none;
+  &:hover {
+    background-color: darken($orange,15%);
+    transition: 0.5s;
+  }
+
 }

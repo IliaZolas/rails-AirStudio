@@ -6,3 +6,12 @@
   text-align: center;
 }
 
+.social-icons ul li {
+  padding-inline-start: 0px;
+  list-style: none;
+  display: inline-block;
+  &:hover{
+    color: $orange;
+    transition: 0.5s;
+  }
+}

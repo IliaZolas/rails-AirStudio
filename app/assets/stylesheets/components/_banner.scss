@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("micro_home_page.jpeg");
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), image-url("home-studio-landing.jpeg");
   background-size: cover;
   background-position: center;
   h1 {
@@ -20,5 +20,16 @@
   }
   .btn {
     padding: 15px 50px;
+    font-size: 20px;
+    background-color: $orange;
+    border: 0;
+    &:hover {
+    background-color: darken($orange,15%);
+    transition: 0.5s;
+    }
   }
+}
+
+.banner-content {
+  margin-top: -70px;
 }
