@@ -8,7 +8,6 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     @studio = Studio.find(params[:studio_id])
     @booking.studio = @studio
-    raise
     @booking.save
     redirect_to studios_path
   end
@@ -16,7 +15,7 @@ class BookingsController < ApplicationController
   def destroy
   end
 
-  private
+  # private
 
   # def booking_params
   #   params.require(:booking).permit(:checkin, :checkout)
