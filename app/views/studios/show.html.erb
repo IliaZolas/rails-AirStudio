@@ -4,7 +4,7 @@
     <div class="d-flex justify-content-between ">
       <h1 class="studio-title"><%= @studio.title %></h1>
       <%# LINK TO BOOKING PAGE%>
-      <%= link_to "BOOK NOW", '#', class: 'btn btn-warning btn-lg align-self-center pr-5 pl-5' %>
+      <%= link_to "BOOK NOW", new_studio_booking_path(@studio), class: 'btn btn-warning btn-lg align-self-center pr-5 pl-5' %>
     </div>
     <div class="d-flex align-items-start mt-2">
       <p class="pr-4 bd-highlight"><%= @studio.price %> CHF / day</p>
