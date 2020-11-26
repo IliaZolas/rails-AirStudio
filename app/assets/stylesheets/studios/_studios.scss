@@ -1,7 +1,31 @@
-// .card-container {
-//   display: grid;
-//   grid-template-column: 1fr 1fr 1fr 1fr;
-//   // grid-gap: 16px;
-// }
+.index-title {
+  font-size: 50px;
+  margin-top: 30px;
+}
 
+.cards-container {
+  display: flex;
+  margin-bottom: 70px;
+}
+
+.cards-container .cards {
+  flex-grow: 1;
+  padding: 16px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#map {
+  height: 100vh;
+  position: sticky;
+  margin-top: 40px;
+  top: 0px;
+}
 

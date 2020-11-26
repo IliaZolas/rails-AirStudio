@@ -1,15 +1,26 @@
 .card {
   margin-bottom: 25px;
-  margin-top: 25px;
   border: none;
   box-shadow: 1px 2px 3px #cecece;
+  height: 370px;
+}
+
+.card-header {
+  height: 60px;
+  text-align: center;
 }
 
 .card-studio-address {
-  font-size: 14px;
+  font-size: 13px;
+  opacity: 0.6;
  }
 
 .card-studio-price {
  font-size: 20px;
 }
+
+.card-footer {
+  align-items: end;
+}
+
 
