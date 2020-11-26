@@ -1,0 +1,36 @@
+.container-mybookings {
+  padding-top: 100px;
+  background-color: lightgrey;
+  // height: 90vh;
+  padding-left: 40px;
+  padding-right:40px;
+  padding-bottom: 20px;
+}
+
+.card-mybookings {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.card-mybooking {
+  background-color: white;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.total-price {
+  background-color: $orange;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+}
+
+.header-mybookings {
+  font-size: 40px;
+  padding-top:20px;
+  padding-bottom:40px;
+}

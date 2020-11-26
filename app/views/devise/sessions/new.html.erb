@@ -1,7 +1,7 @@
 <div class="container">
   <div class="sign-container">
-      <div class="sign-form col-5 justify-content-center">
-        <div class="form-login">
+      <div class="sign-form col-6 justify-content-center">
+        <div class="form-login form-signup-page">
           <h2>Log in</h2>
 
           <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -26,8 +26,9 @@
           <%= render "devise/shared/links" %>
         </div>
       </div>
-    <div class="recording-image align-middle">
-      <img class="mx-auto" style="width: 500px;" src="https://images.unsplash.com/photo-1604513843888-824303218a45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt="Card image cap">
+     <div class="recording-image-signup col-6 align-middle">
+      <div class="text-overlay-reg">
+        <h3>Just a couple steps till you can start recording</h3>
     </div>
-  </div>
+   </div>
 </div>
