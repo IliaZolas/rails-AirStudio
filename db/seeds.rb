@@ -43,7 +43,7 @@ ghizlaine = User.new(
     email: "ghighi@mail.com",
     password: "123456",
     last_name: 'Odyssey',
-    first_name: 'Ghizlaine',
+    first_name: 'Ghizlane',
   )
 ghizlaine.save!
 
