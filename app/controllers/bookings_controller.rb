@@ -5,12 +5,20 @@ class BookingsController < ApplicationController
   end
 
   def create
-    # @user = user.find(params[:user_id])
-    # @studio = studio.find(params[:studio_id])
+    @booking = Booking.new
+    @studio = Studio.find(params[:studio_id])
+    @booking.studio = @studio
     raise
+    @booking.save
+    redirect_to studios_path
   end
 
   def destroy
   end
 
+  private
+
+  # def booking_params
+  #   params.require(:booking).permit(:checkin, :checkout)
+  # end
 end
