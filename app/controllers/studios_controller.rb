@@ -6,7 +6,9 @@ class StudiosController < ApplicationController
     @markers = @studios.geocoded.map do |studio|
       {
         lat: studio.latitude,
-        lng: studio.longitude
+        lng: studio.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { studio: studio })
+        # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
       }
     end
   end
