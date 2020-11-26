@@ -1,6 +1,8 @@
 <div class="studio-card-container">
 <div class="studio-show-card shadow mt-5 mb-5 rounded">
-  <img class="w-100 shadow rounded" src='https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'>
+  <% if @studio.photo.attached? %>
+    <%= cl_image_tag @studio.photo.key, crop: :fill, class: "w-100 shadow rounded", height: 750 %>
+  <% end %>
   <div class="p-5">
     <div class="d-flex justify-content-between ">
       <h1 class="studio-title"><%= @studio.title %></h1>
