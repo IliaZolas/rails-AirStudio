@@ -39,13 +39,13 @@ ilia = User.new(
   )
 ilia.save!
 
-ghizlaine = User.new(
+ghizlane = User.new(
     email: "ghighi@mail.com",
     password: "123456",
     last_name: 'Odyssey',
     first_name: 'Ghizlane',
   )
-ghizlaine.save!
+ghizlane.save!
 
 puts 'Creating 5 fake users...'
 
@@ -66,7 +66,7 @@ puts "creating Makers 8 Studios"
     title:    Faker::Book.unique.title,
     address: "rue Marterey 36, 1005 lausanne",
     price:  rand(85..214),
-    description: Faker::Lorem.paragraph,
+    description: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
     user: jonas
   )
   studio1.save!
@@ -74,7 +74,7 @@ puts "creating Makers 8 Studios"
     title:    Faker::Book.unique.title,
     address: "Avenue du Leman 19, 1005 Lausanne",
     price:  rand(85..214),
-    description: Faker::Lorem.paragraph,
+    description: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
     user: jonas
   )
   studio2.save!
@@ -82,7 +82,7 @@ puts "creating Makers 8 Studios"
     title:    Faker::Book.unique.title,
     address: "Boulvevard de Grancy 1, 1006 Lausanne",
     price:  rand(85..214),
-    description: Faker::Lorem.paragraph,
+    description: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
     user: ilia
   )
   studio3.save!
@@ -90,7 +90,7 @@ puts "creating Makers 8 Studios"
     title:    Faker::Book.unique.title,
     address: "Rue Beau-Sejour 27, 1003 Lausanne",
     price:  rand(85..214),
-    description: Faker::Lorem.paragraph,
+    description: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
     user: ilia
   )
   studio4.save!
@@ -98,7 +98,7 @@ puts "creating Makers 8 Studios"
     title:    Faker::Book.unique.title,
     address: "Avenue de la gare 46, 1001 Lausanne",
     price:  rand(85..214),
-    description: Faker::Lorem.paragraph,
+    description: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
     user: elodie
   )
   studio5.save!
@@ -106,7 +106,7 @@ puts "creating Makers 8 Studios"
     title:    Faker::Book.unique.title,
     address: "Rue du tunnel 7, 1005 Lausanne",
     price:  rand(85..214),
-    description: Faker::Lorem.paragraph,
+    description: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
     user: elodie
   )
   studio6.save!
@@ -114,16 +114,16 @@ puts "creating Makers 8 Studios"
     title:    Faker::Book.unique.title,
     address: "Rue du tunnel 1, 1005 Lausanne",
     price:  rand(85..214),
-    description: Faker::Lorem.paragraph,
-    user: ghizlaine
+    description: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
+    user: ghizlane
   )
   studio7.save!
   studio8 = Studio.new(
     title:    Faker::Book.unique.title,
     address: "Rue du Simplon 35, 1006 Lausanne",
     price:  rand(85..214),
-    description: Faker::Lorem.paragraph,
-    user: ghizlaine
+    description: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
+    user: ghizlane
   )
   studio8.save!
 
@@ -134,7 +134,7 @@ puts 'Creating 20 fake studios...'
     title:    Faker::Book.unique.title,
     address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
     price:  rand(85..214),
-    description: Faker::Lorem.paragraph,
+    description: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
     user: User.all.sample
   )
   studio.save!
