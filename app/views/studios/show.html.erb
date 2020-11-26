@@ -1,23 +1,16 @@
-<div class="studio-container">
-  <div class="img-infos">
-    <img class="studio-img" src='https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'>
-    <div class="studio-price">
-      <p><%= @studio.price %> CHF</p>
+<div class="studio-show-card shadow mt-5 mb-5 rounded">
+  <img class="w-100 shadow rounded" src='https://images.pexels.com/photos/164938/pexels-photo-164938.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'>
+  <div class="p-5">
+    <div class="d-flex justify-content-between ">
+      <h1 class="studio-title"><%= @studio.title %></h1>
+      <%# LINK TO BOOKING PAGE%>
+      <%= link_to "BOOK NOW", '#', class: 'btn btn-warning btn-lg align-self-center pr-5 pl-5' %>
     </div>
-  </div>
-  <div class="description-container">
-    <h1 class="studio-title"><%= @studio.title %></h1>
-    <div class="studio-infos d-flex justify-content-between">
-      <p class="text-muted"><%= @studio.address %></p>
+    <div class="d-flex align-items-start mt-2">
+      <p class="pr-4 bd-highlight"><%= @studio.price %> CHF / day</p>
+      <p class="text-muted"><%= @studio.address%></p>
     </div>
-    <div class="studio-description">
-      <h2>Description</h2>
-      <p><%= @studio.description %></p>
-    </div>
-    <div class="studio-owner">
-      <p>Created by <%= @studio.user.first_name %></p>
-          <%= link_to "Back to all studios", studios_path, class: 'btn btn-primary' %>
-    </div>
-
+    <p class="studio-description mt-4"><%= @studio.description %></p>
+    <p class="text-right">Created by <%= @studio.user.first_name %></p>
   </div>
 </div>
