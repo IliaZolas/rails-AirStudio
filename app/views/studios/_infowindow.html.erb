@@ -1,5 +1,13 @@
-<div class="marker"><h3 ><%= link_to studio.title, studio_path(studio)  %> </h3>
-<h3 ><%= studio.price %>Chf</h3>
-<%#= studio.photo.key %>
-<img class="map-image" src="https://static.questiondeson.com/img/studios/a/1-studio-a-2019-front.jpg" alt="Card image cap">
+<div class="marker">
+
+  <div class="marker-image-container">
+    <img class="map-image" src="https://static.questiondeson.com/img/studios/a/1-studio-a-2019-front.jpg" alt="Card image cap">
+  </div>
+
+  <div class="marker-details">
+    <h3 class="marker-heading"><%= link_to studio.title, studio_path(studio)  %> </h3>
+    <h3 class="marker-price"><%= studio.price %>Chf</h3>
+  <%#= studio.photo.key %>
+  </div>
+
 </div>

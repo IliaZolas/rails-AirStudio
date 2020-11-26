@@ -8,11 +8,38 @@
   image-size: 20%;
 }
 
+.marker-image-container {
+  margin-bottom: 10px;
+}
+
 .map-image {
-  height: 60px;
-  width: 90px;
+  // height: 60px;
+  width: 100%;
+}
+
+.marker-details {
+
+}
+
+.marker-price {
+  padding-top: 8px;
 }
 
 .marker {
-  background-color: #FFA349
+  background-color: #fff;
+}
+
+
+.marker-heading a {
+  color: white;
+  font-size: 14px;
+  background-color: $orange;
+  border-radius: 2px;
+  padding: 5px;
+
+  text-decoration: none;
+   &:hover {
+    background-color: darken($orange,5%);
+    transition: 0.5s;
+  }
 }

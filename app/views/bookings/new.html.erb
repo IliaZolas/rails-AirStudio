@@ -1,1 +1,9 @@
 <h1>new booking</h1>
+
+<h2> <%= "Please enter your dates for #{@studio.title}" %></h2>
+
+<%= simple_form_for [@studio, @booking] do |f| %>
+  <%= f.input :checkin %>
+  <%= f.input :checkout %>
+  <%= f.submit "BOOK", class: "btn btn-primary" %>
+<% end %>

@@ -1,12 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-# "title"/"address"/"price"/"description"
-# require 'faker'
 require "open-uri"
 require 'faker'
 puts "cleaning data base"
@@ -40,13 +31,13 @@ ilia = User.new(
   )
 ilia.save!
 
-ghizlaine = User.new(
+ghizlane = User.new(
     email: "ghighi@mail.com",
     password: "123456",
     last_name: 'Odyssey',
     first_name: 'Ghizlane',
   )
-ghizlaine.save!
+ghizlane.save!
 
 puts 'Creating 5 fake users...'
 
@@ -56,7 +47,6 @@ puts 'Creating 5 fake users...'
     password: "123456",
     last_name: Faker::Name.first_name,
     first_name: Faker::Name.last_name,
-
   )
   user.save!
 end
@@ -67,7 +57,7 @@ studio1 = Studio.new(
   title:    Faker::Book.unique.title,
   address: "Rue Marterey 36, 1005 lausanne",
   price:  rand(85..214),
-  description: Faker::Lorem.paragraph,
+  description: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
   user: jonas
 )
 studio1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
@@ -77,7 +67,7 @@ studio2 = Studio.new(
   title:    Faker::Book.unique.title,
   address: "Avenue du Leman 19, 1005 Lausanne",
   price:  rand(85..214),
-  description: Faker::Lorem.paragraph,
+  description: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
   user: jonas
 )
 studio2.photo.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
@@ -87,7 +77,7 @@ studio3 = Studio.new(
   title:    Faker::Book.unique.title,
   address: "Boulevard de Grancy 1, 1006 Lausanne",
   price:  rand(85..214),
-  description: Faker::Lorem.paragraph,
+  description: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
   user: ilia
 )
 studio3.photo.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
@@ -97,7 +87,7 @@ studio4 = Studio.new(
   title:    Faker::Book.unique.title,
   address: "Rue Beau-Sejour 27, 1003 Lausanne",
   price:  rand(85..214),
-  description: Faker::Lorem.paragraph,
+  description: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
   user: ilia
 )
 studio4.photo.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
@@ -107,7 +97,7 @@ studio5 = Studio.new(
   title:    Faker::Book.unique.title,
   address: "Avenue de la gare 46, 1001 Lausanne",
   price:  rand(85..214),
-  description: Faker::Lorem.paragraph,
+  description: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
   user: elodie
 )
 studio5.photo.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
@@ -117,7 +107,7 @@ studio6 = Studio.new(
   title:    Faker::Book.unique.title,
   address: "Rue du tunnel 7, 1005 Lausanne",
   price:  rand(85..214),
-  description: Faker::Lorem.paragraph,
+  description: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
   user: elodie
 )
 studio6.photo.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
@@ -127,7 +117,7 @@ studio7 = Studio.new(
   title:    Faker::Book.unique.title,
   address: "Rue du tunnel 1, 1005 Lausanne",
   price:  rand(85..214),
-  description: Faker::Lorem.paragraph,
+  description: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
   user: ghizlaine
 )
 studio7.photo.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
@@ -137,7 +127,7 @@ studio8 = Studio.new(
   title:    Faker::Book.unique.title,
   address: "Rue du Simplon 35, 1006 Lausanne",
   price:  rand(85..214),
-  description: Faker::Lorem.paragraph,
+  description: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
   user: ghizlaine
 )
 studio8.photo.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
@@ -151,11 +141,12 @@ photos = ["https://images.unsplash.com/photo-1574517947730-55cb23e608c2?ixlib=rb
 "https://images.unsplash.com/photo-1555724950-dcd0957571f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80", "https://images.unsplash.com/photo-1560844915-bb3189e146ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1731&q=80"]
 10.times do
   file = URI.open(photos.first)
+
   studio = Studio.new(
     title:    Faker::Book.unique.title,
     address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
     price:  rand(85..214),
-    description: Faker::Lorem.paragraph,
+    description: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
     user: User.all.sample
   )
   studio.photo.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
