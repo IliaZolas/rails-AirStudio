@@ -19,6 +19,15 @@ class StudiosController < ApplicationController
 
   def show
     @studio = Studio.find(params[:id])
+    @studios = Studio.all
+    @markers = @studios.geocoded.map do |studio|
+      {
+        lat: studio.latitude,
+        lng: studio.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { studio: studio })
+        # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+      }
+    end
   end
 
   def create
