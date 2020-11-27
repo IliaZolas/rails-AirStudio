@@ -5,16 +5,16 @@
     <div class="card-mybookings">
       <% @studios.each do |studio| %>
         <div class="card-mybooking">
-         <div>
+         <div class="img-mybookings">
             <% if studio.photo.attached? %>
               <%= cl_image_tag studio.photo.key, class: "card-img-top" %>
           <% end %>
         </div>
-          <p><strong></strong> <%= studio.title %></p>
-          <p><strong></strong> <%= studio.description %></p>
-          <p><strong></strong> <%= studio.price %> - Chf / Day</p>
-          <p><strong></strong> <%= studio.address %></p>
-          <p class='btn btn-lg btn-primary'>
+          <h1><strong><%= studio.title %></strong> </h1>
+          <p><%= studio.description %></p>
+          <p><strong><%= studio.price %> - Chf / Day</strong></p>
+          <p><%= studio.address %></p>
+          <p class='delete-button'>
           <%= link_to "Delete",
                        studio_path(studio),
                        method: :delete,
