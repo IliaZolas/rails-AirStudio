@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   end
   resources :bookings, only:[:destroy]
   get "/my_bookings", to: "bookings#booking_manager"
+  get "/my_studios", to: "studios#studio_manager"
 end
 

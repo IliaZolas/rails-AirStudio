@@ -29,11 +29,23 @@ class StudiosController < ApplicationController
   end
 
   def create
-    @studio = Studio.new(params[:studio])
+    @studio = Studio.new(studio_params)
+    @studio.user = current_user
     if @studio.save
-      redirect_to studios_index_path
+      redirect_to studio_path(@studio)
     else
       render 'new'
     end
+  end
+
+    def studio_manager
+    # binding.pry
+    @studios = Studio.where(user: current_user)
+  end
+
+  private
+
+  def studio_params
+    params.require(:studio).permit(:title, :address, :description, :price, :user_id, :photo)
   end
 end

@@ -1,2 +1,31 @@
-<h1>Studios#new</h1>
-<p>Find me in app/views/studios/new.html.erb</p>
+<div class="container-booking">
+
+  <div class="card-booking">
+    <h1>New Studio Profile</h1>
+
+    <h2> <%= "Please give us details about your studio" %></h2>
+
+    <%= simple_form_for [@studio] do |f| %>
+          <%= f.input :title,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "title" }%>
+          <%= f.input :description,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "description" }%>
+          <%= f.input :address,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "address" }%>
+          <%= f.input :price,
+                      required: true,
+                      input_html: { autocomplete: "price per day" } %>
+          <%= f.input :photo,
+                      autofocus: true,
+                      as: :file %>
+      <%= f.submit "CREATE", class: "btn btn-primary" %>
+  <% end %>
+  </div>
+</div>
+

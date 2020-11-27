@@ -1,0 +1,19 @@
+
+<div class="container-mybookings">
+  <h1 class="header-mybookings">My Studios</h1>
+  <div class="list-bookings">
+    <div class="card-mybookings">
+      <% @studios.each do |studio| %>
+        <div class="card-mybooking">
+          <p><strong></strong> <%= studio.title %></p>
+          <p><strong></strong> <%= studio.description %></p>
+          <p><strong></strong> <%= studio.price %> - Chf / Day</p>
+          <p><strong></strong> <%= studio.address %></p>
+          <% if studio.photo.attached? %>
+              <%= cl_image_tag studio.photo.key, class: "card-img-top", height: 180 %>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+</div>
