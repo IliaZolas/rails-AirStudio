@@ -1,7 +1,7 @@
 <div class="studio-card-container">
   <div class="studio-show-card shadow mt-5 mb-5 rounded">
     <% if @studio.photo.attached? %>
-      <%= cl_image_tag @studio.photo.key, crop: :fill, class: "w-100 shadow rounded", height: 750 %>
+      <%= cl_image_tag @studio.photo.key, crop: :fill, class: "w-100 h-100 shadow rounded"%>
     <% end %>
     <div class="p-5">
       <div class="d-flex justify-content-between">
