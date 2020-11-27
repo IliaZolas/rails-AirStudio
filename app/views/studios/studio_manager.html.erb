@@ -5,7 +5,7 @@
     <div class="card-mybookings">
       <% @studios.each do |studio| %>
         <div class="card-mybooking">
-          <div>
+         <div>
             <% if studio.photo.attached? %>
               <%= cl_image_tag studio.photo.key, class: "card-img-top" %>
           <% end %>
@@ -14,6 +14,12 @@
           <p><strong></strong> <%= studio.description %></p>
           <p><strong></strong> <%= studio.price %> - Chf / Day</p>
           <p><strong></strong> <%= studio.address %></p>
+          <p class='btn btn-lg btn-primary'>
+          <%= link_to "Delete",
+                       studio_path(studio),
+                       method: :delete,
+                       data: {confirm: "Are you sure?"} %>
+          </p>
         </div>
         <% end %>
       </div>
