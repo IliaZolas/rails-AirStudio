@@ -7,8 +7,8 @@ class StudiosController < ApplicationController
       {
         lat: studio.latitude,
         lng: studio.longitude,
-        infoWindow: render_to_string(partial: "infowindow", locals: { studio: studio })
-        # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+        infoWindow: render_to_string(partial: "infowindow", locals: { studio: studio }),
+        image_url: helpers.asset_url('favicon.png')
       }
     end
   end
@@ -23,8 +23,8 @@ class StudiosController < ApplicationController
       [{
         lat: @studio.latitude,
         lng: @studio.longitude,
-        infoWindow: render_to_string(partial: "infowindow", locals: { studio: @studio })
-        # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+        infoWindow: render_to_string(partial: "infowindow", locals: { studio: @studio }),
+        image_url: helpers.asset_url('favicon.png')
       }]
   end
 
