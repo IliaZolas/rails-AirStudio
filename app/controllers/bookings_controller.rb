@@ -18,6 +18,7 @@ class BookingsController < ApplicationController
     # binding.pry
     @bookings = Booking.where(user: current_user)
     @studios = Studio.where(user: current_user)
+    # @studio = Studio.find(params[:studio_id])
   end
 
   def destroy
@@ -29,6 +30,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:checkin, :checkout)
+    params.require(:booking).permit(:checkin, :checkout, :photo)
   end
 end
