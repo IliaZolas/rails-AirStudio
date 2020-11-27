@@ -12,6 +12,12 @@
           <% if studio.photo.attached? %>
               <%= cl_image_tag studio.photo.key, class: "card-img-top", height: 180 %>
           <% end %>
+          <p class='btn btn-lg btn-primary'>
+          <%= link_to "Delete",
+                       studio_path(studio),
+                       method: :delete,
+                       data: {confirm: "Are you sure?"} %>
+          </p>
         </div>
         <% end %>
       </div>

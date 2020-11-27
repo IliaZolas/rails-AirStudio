@@ -38,9 +38,15 @@ class StudiosController < ApplicationController
     end
   end
 
-    def studio_manager
+  def studio_manager
     # binding.pry
     @studios = Studio.where(user: current_user)
+  end
+
+  def destroy
+    @studio = Studio.find(params[:id])
+    @studio.destroy
+    redirect_to my_studios_path
   end
 
   private

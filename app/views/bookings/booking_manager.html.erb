@@ -13,6 +13,12 @@
             <div class="total-price">
             <h2><strong>Total Price: <%= booking.total_price %>Chf</strong></h2>
             </div>
+          <p class='btn btn-lg btn-primary'>
+          <%= link_to "Delete",
+                       booking_path(booking),
+                       method: :delete,
+                       data: {confirm: "Are you sure?"}  %>
+          </p>
         </div>
         <% end %>
       </div>
