@@ -92,7 +92,7 @@ studio4 = Studio.new(
 )
 studio4.photo.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
 studio4.save!
-file = URI.open('https://images.unsplash.com/photo-1597083610113-6e274e92ce55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
+file = URI.open('https://images.unsplash.com/photo-1581092795442-d153057d8e0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
 studio5 = Studio.new(
   title:    Faker::Book.unique.title,
   address: "Avenue de la gare 46, 1001 Lausanne",
@@ -102,7 +102,7 @@ studio5 = Studio.new(
 )
 studio5.photo.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
 studio5.save!
-file = URI.open('https://images.unsplash.com/photo-1597083610113-6e274e92ce55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
+file = URI.open('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
 studio6 = Studio.new(
   title:    Faker::Book.unique.title,
   address: "Rue du tunnel 7, 1005 Lausanne",
@@ -112,7 +112,7 @@ studio6 = Studio.new(
 )
 studio6.photo.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
 studio6.save!
-file = URI.open('https://images.unsplash.com/photo-1597083610113-6e274e92ce55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
+file = URI.open('https://images.unsplash.com/photo-1598653222000-6b7b7a552625?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
 studio7 = Studio.new(
   title:    Faker::Book.unique.title,
   address: "Rue du tunnel 1, 1005 Lausanne",
@@ -122,7 +122,7 @@ studio7 = Studio.new(
 )
 studio7.photo.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
 studio7.save!
-file = URI.open('https://images.unsplash.com/photo-1597083610113-6e274e92ce55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
+file = URI.open('https://images.unsplash.com/photo-1512053459797-38c3a066cabd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80')
 studio8 = Studio.new(
   title:    Faker::Book.unique.title,
   address: "Rue du Simplon 35, 1006 Lausanne",
