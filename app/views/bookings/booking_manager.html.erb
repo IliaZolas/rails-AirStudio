@@ -1,14 +1,21 @@
-<h1>my bookings</h1>
 
-<div class="list-bookings">
-<ul>
-  <% @bookings.each do |booking| %>
-    <h2> <li>Studio : <%= booking.studio.title %></li></h2>
-    <h3><li>Check-in : <%= booking.checkin %></li></h3>
-    <h3><li>Check-out : <%= booking.checkout %></li></h3>
-    <h3><li>Studio Address : <%= booking.studio.address %></li></h3>
-    <h3><li>Daily Price : <%= booking.studio.price %>Chf</li></h3>
-    <h2><li>Total Price : <%= booking.total_price %>Chf</li></h2>
-  <% end %>
-</ul>
+<div class="container-mybookings">
+  <h1 class="header-mybookings">My Bookings</h1>
+  <div class="list-bookings">
+    <div class="card-mybookings">
+      <% @bookings.each do |booking| %>
+        <div class="card-mybooking">
+          <p><strong>Studio:</strong> <%= booking.studio.title %></p>
+          <p><strong>Check-in:</strong> <%= booking.checkin %></p>
+          <p><strong>Check-out:</strong> <%= booking.checkout %></p>
+          <p><strong>Studio Address:</strong> <%= booking.studio.address %></p>
+          <p><strong>Daily Price:</strong> <%= booking.studio.price %>Chf</p>
+            <div class="total-price">
+            <h2><strong>Total Price: <%= booking.total_price %>Chf</strong></h2>
+            </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
 </div>
+
