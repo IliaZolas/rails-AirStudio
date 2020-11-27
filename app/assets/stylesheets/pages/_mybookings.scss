@@ -9,7 +9,7 @@
 
 .card-mybookings {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
 }
 
@@ -21,16 +21,25 @@
 }
 
 .total-price {
-  background-color: $orange;
+  background-color: #f0f0f0;
   padding-top: 10px;
   padding-bottom: 5px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   text-align: center;
-  color: white;
-  border-radius: 5px;
+  color: black;
 }
 
 .header-mybookings {
   font-size: 40px;
   padding-top:20px;
   padding-bottom:40px;
+}
+
+.img-mybookings {
+  padding-bottom: 20px;
+}
+
+.booking-img-div {
+
 }

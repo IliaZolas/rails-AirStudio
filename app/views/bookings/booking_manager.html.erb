@@ -5,10 +5,14 @@
     <div class="card-mybookings">
       <% @bookings.each do |booking| %>
         <div class="card-mybooking">
-          <p><strong>Studio:</strong> <%= booking.studio.title %></p>
-          <p><strong>Check-in:</strong> <%= booking.checkin %></p>
-          <p><strong>Check-out:</strong> <%= booking.checkout %></p>
-          <p><strong>Studio Address:</strong> <%= booking.studio.address %></p>
+          <div class="img-mybookings">
+            <% if booking.studio.photo.attached? %>
+            <%= cl_image_tag booking.studio.photo.key, crop: :fill, class: "w-100 h-100 shadow rounded booking-img-div"%>
+          <% end %>
+          </div>
+          <h1><strong><%= booking.studio.title %></strong></h1>
+          <p><strong>Check-in:</strong> <%= booking.checkin %>, <strong>Check-out:</strong> <%= booking.checkout %></p>
+          <p><%= booking.studio.address %></p>
           <p><strong>Daily Price:</strong> <%= booking.studio.price %>Chf</p>
             <div class="total-price">
             <h2><strong>Total Price: <%= booking.total_price %>Chf</strong></h2>
