@@ -3,11 +3,14 @@
     <%= link_to image_tag("logo.png", class:"logo"), root_path %>
   </div>
   <div class="navbar__list">
-    <li class="navbar__item item1"> <%= link_to 'Our Studios', studios_path, class:"navbar__links" %> </li>
+    <li class="navbar__item item1"> <%= link_to 'All Studios', studios_path, class:"navbar__links" %> </li>
     <% if user_signed_in? %>
-        <li class="navbar__item item2"> <%= link_to "logout", destroy_user_session_path, method: :delete %></li>
+        <li class="navbar__item"> <%= link_to "My Studios", my_studios_path, class:"navbar__links" %></li>
+        <li class="navbar__item"> <%= link_to "My Bookings", my_bookings_path, class:"navbar__links" %></li>
+        <li class="navbar__item"> <%= link_to "Create a Studio", new_studio_path, class:"navbar__links" %></li>
+        <li class="navbar__item item2"> <%= link_to "Log-out", destroy_user_session_path, method: :delete %></li>
     <% else %>
-        <li class="navbar__item item2"> <%= link_to 'login', user_session_path  %></li>
+        <li class="navbar__item item2"> <%= link_to 'Log-in', user_session_path  %></li>
     <% end %>
     <!--     <li class="navbar__item item3">Log-out</li> -->
   </div>

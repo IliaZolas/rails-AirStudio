@@ -1,7 +1,9 @@
 <div class="marker">
 
   <div class="marker-image-container">
-    <img class="map-image" src="https://static.questiondeson.com/img/studios/a/1-studio-a-2019-front.jpg" alt="Card image cap">
+  <% if studio.photo.attached? %>
+  <%= cl_image_tag studio.photo.key, class: "card-img-top"%>
+  <% end %>
   </div>
 
   <div class="marker-details">
